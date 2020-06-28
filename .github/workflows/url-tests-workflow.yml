@@ -2,4 +2,4 @@ on: push
 jobs:
   tests: 
     steps:
-      run: echo "Tests"
+    - run: echo "Tests"
