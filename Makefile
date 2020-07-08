@@ -1,3 +1,3 @@
-.PHONY install
+.PHONY: install
 install:
 	pip install pipenv
