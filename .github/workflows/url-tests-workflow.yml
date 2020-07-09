@@ -11,4 +11,6 @@ jobs:
     - run: make test
     - uses: actions/upload-artifact@v1
       with:
+        name: pytest-results
         path: junit/test-results.xml
+      if: ${{ always() }}
