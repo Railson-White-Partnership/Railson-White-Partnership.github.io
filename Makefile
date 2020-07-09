@@ -4,4 +4,4 @@ install:
 	pipenv install
 .PHONY: test
 test:
-	pipenv run pytest --junit-xml=junit/test-results.xml
+	pipenv run pytest --junit-xml=test-reports/test-results.xml

@@ -12,7 +12,7 @@ jobs:
     - uses: actions/upload-artifact@v1
       with:
         name: pytest-results
-        path: junit/test-results.xml
+        path: test-reports/test-results.xml
       if: ${{ always() }}
     - uses: AutoModality/action-xunit-viewer@v1  
       id: xunit-viewer
