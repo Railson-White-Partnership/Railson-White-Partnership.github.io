@@ -14,3 +14,11 @@ jobs:
         name: pytest-results
         path: junit/test-results.xml
       if: ${{ always() }}
+    - uses: AutoModality/action-xunit-viewer@v1  
+      id: xunit-viewer
+    - uses: actions/upload-artifact@v1
+      with:
+        name: ${{ steps.xunit-viewer.outputs.report-name }}
+        path: ${{ steps.xunit-viewer.outputs.report-dir }}
+    -   
+
