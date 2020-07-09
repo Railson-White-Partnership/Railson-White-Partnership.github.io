@@ -9,3 +9,6 @@ jobs:
         python-version: 3.8
     - run: make
     - run: make test
+    - uses: actions/upload-artifact@v1
+      with:
+        path: junit/test-results.xml
