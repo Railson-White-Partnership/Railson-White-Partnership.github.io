@@ -20,5 +20,3 @@ jobs:
       with:
         name: ${{ steps.xunit-viewer.outputs.report-name }}
         path: ${{ steps.xunit-viewer.outputs.report-dir }}
-    -   
-
