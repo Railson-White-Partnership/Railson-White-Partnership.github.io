@@ -8,5 +8,4 @@ jobs:
       with:
         python-version: 3.8
     - run: make
-    - run: python --version
-    - run: pytest
+    - run: make test
