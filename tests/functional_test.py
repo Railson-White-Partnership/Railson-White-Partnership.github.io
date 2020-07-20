@@ -4,22 +4,24 @@ Functional tests for railsonwhite.com
 """
 from http import HTTPStatus
 from urllib.parse import urlunparse, urlparse
+from xprocess import ProcessStarter
 import requests
 import pytest
 
-schemes = [
-    "https",
-]
-
-netlocs = [
-    "www.railsonwhite.com",
-    "railson-white-partnership.github.io/website/"
-
+url_conf = [
+    ("http", "localhost:4000", HTTPStatus.OK),
+#    ("http", "www.railsonwhite.com", HTTPStatus.OK),
+#    ("http", "www.railsonwhite.com", HTTPStatus.FOUND),
+#    ("https", "www.railsonwhite.com", HTTPStatus.OK),
+#    ("http", "railson-white-partnership.github.io/website/", HTTPStatus.FOUND)
+#    ("https", "railson-white-partnership.github.io/website/", HTTPStatus.OK)
 ]
 
 
 paths = [
     "/",
+    ]
+"""
     "/approach/",
     "/client-list/",
     "/contact-us/",
@@ -84,18 +86,27 @@ paths = [
     "/xmlrpc.php?rsd",
     "/xmlrpc.php",
 ]
+"""
+
+@pytest.fixture
+def localserver(xprocess):
+    class Starter(ProcessStarter):
+        pattern = "Server running... press ctrl-c to stop."
+        args = ["bundle", "exec", "jekyll", "serve"]
+    logfile = xprocess.ensure("localserver", Starter)
+    yield
+    xprocess.getinfo("localserver").terminate()
+
 
 @pytest.mark.parametrize("path", paths)
-@pytest.mark.parametrize("netloc", netlocs)
-@pytest.mark.parametrize("scheme", schemes)
-def test_url_get_ok(scheme, netloc, path):
+@pytest.mark.parametrize("scheme, netloc, status", url_conf)
+def test_url_get(scheme, netloc, path, status, localserver):
     """Check URLs respond to HTTP requests."""
     params = query = fragment = ""
     components = scheme, netloc, path, params, query, fragment
     url = urlunparse(components)
     response = requests.get(url, allow_redirects=False)
-    assert response.status_code == HTTPStatus.OK
-    assert response.url == url
+    assert response.status_code == status
 
 redirects = [
     ("railsonwhite.com", "www.railsonwhite.com"),
