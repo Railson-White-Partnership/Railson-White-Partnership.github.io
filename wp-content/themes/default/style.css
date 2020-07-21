@@ -1,0 +1,609 @@
+@charset "UTF-8";
+
+/* CSS Style Sheet - Railson White Partnership website */
+
+/* Dec 2008 */
+
+
+html {min-height: 100%;}
+
+a {
+	color: #1D708C;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #1D708C;
+	text-decoration: underline;
+}
+
+a:visited {
+	color: #333333;
+	text-decoration: underline;
+}
+
+
+
+a img {border: none;}
+
+body {
+	background-color: #CCCCCC;
+	font-size: 12px;
+	font-family: Verdana, Arial, SunSans-Regular, Sans-Serif;
+	color:#564b47;
+	padding:0px;
+	margin:0px;
+}
+
+code {
+	background: #FFF;
+	border: 1px solid #EEE;
+	border-left: 6px solid #CCC;
+	color: #FFF;
+	display: block;
+	font: normal 1em Arial, SunSans-Regular, Sans-Serif;
+	line-height: 1.6em;
+	margin-bottom: 12px;
+	padding: 8px 10px;
+	white-space: pre;
+}
+
+blockquote {
+	display: block;
+	font-weight: bold;
+	padding-left: 28px;
+}
+
+h1 {
+	font-size: 20px;
+	margin:0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 14px;
+	padding-left: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-weight: normal;
+}
+
+h2 {
+	font-size:14px;
+	font-weight: bold;
+	margin:0px;
+	color: #000000;
+	margin:0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 0px;
+}
+
+/* misc */
+
+.clearer {clear: both; font-size: 0;}
+.left {float: left;}
+.right {float: right;}
+
+/* structure */
+
+
+#container {
+	width: 888px;
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+	background-image: url(assets/greenband.gif);
+	background-repeat: repeat-y;
+	background-position: 10px 40px;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	}
+
+/* header */
+
+#banner {
+	text-align: left;
+	padding: 0px;
+	margin: 0px;
+	height: 117px;
+	background-image: url(assets/banner_top.gif);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+/* content */
+
+
+#content {
+	margin: 0px;
+	float: right;
+	width: 730px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 70px;
+	padding-left: 0px;
+	background-image: url(assets/right_panel_bg.gif);
+	background-repeat: repeat-y;
+	background-position: right top;
+    min-height:460px;
+    height:auto !important;
+    height:460px; 
+}
+
+
+p, pre{
+	margin:0px;
+	padding-top: 5px;
+	padding-right: 180px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	line-height: 14px;
+	color: #000000;
+}
+
+
+/*#greenband {
+	background-image: url(assets/greenband.gif);
+	background-repeat: repeat-y;
+	background-position: 10px top;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* IE hack to repair border the definition below is for all non IE browsers */
+/*html>body #greenband {
+	background-image: url(assets/greenband.gif);
+	background-repeat: repeat-y;
+	background-position: left top;
+	margin: 0px;
+	padding: 0px;
+}*/
+
+
+
+#alpha {
+	margin: 0px;
+	float: left;
+	width: 400px;
+	padding-top: 16px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 11px;
+	display: inline;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+}
+
+#alpha p {
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	line-height: 16px;
+
+}
+
+#alpha li {
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+}
+
+#alpha li ul li {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 16px;
+	padding-left: 0px;
+	font-size:12px;
+	list-style-type: none;
+	color: #1D708C;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 2px;
+}
+
+#beta {
+	float: right;
+	display:inline;
+	width: 255px;
+	padding-top: 20px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-right: 17px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+#beta p {
+	margin: 0px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	color: #FFFFFF;
+
+}
+
+
+#beta ul {
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	color: #FFFFFF;
+	margin-top: 12px;
+}
+
+
+#beta li {
+	color: #FFFFFF;
+	margin-top: 2px;
+	padding: 0px;
+	margin-right: 16px;
+	margin-bottom: 6px;
+	margin-left: 12px;
+}
+
+
+
+/* path */
+.path {
+	background: #949490;
+	color: #001834;
+	font: normal 1.1em Arial, SunSans-Regular, Sans-Serif;
+	padding: 8px 12px;
+}
+.path li,.path ul {display: inline;}
+.path a {
+	color: #FAFAFA;
+	text-decoration: none;
+	margin-right: 16px;
+}
+.path a:hover {
+	color: #FFE;
+	text-decoration: underline;
+}
+
+
+
+/* navigation */
+
+#left {
+	float: left;
+	width: 135px;
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+}
+
+#navigation {
+	background-color: #e4e4e5;
+	margin:0px;
+	display: block;
+	padding-top: 20px;
+	padding-right: 0px;
+	padding-bottom: 20px;
+	padding-left: 0px;
+}
+
+#navigation li{
+	list-style-type: none;
+	display: block;
+	padding: 0px;
+	margin :0px;
+}
+#navigation ol{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#navigation ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#navigation li a{
+	display: block;
+	list-style-type:none;
+	color:#1D708C;
+	height: 24px;
+	padding: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+	text-decoration:none;
+	text-indent: 4px;
+	background-color: #FFFFFF;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 1px;
+	margin-left: 0px;
+}
+
+#navigation li a:hover {
+	display: block;
+	list-style-type:none;
+	color:#FFFFFF;
+	height: 24px;
+	padding: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+	text-decoration:none;
+	text-indent: 4px;
+	background-color: #1D708C;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 1px;
+	margin-left: 0px;
+}
+
+#navigation ul li a{
+	display: block;
+	list-style-type:none;
+	color:#333333;
+	height: 24px;
+	padding: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+	text-decoration:none;
+	text-indent: 4px;
+	background-color: #e4e4e5;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 1px;
+	margin-left: 0px;
+}
+
+#navigation ul li a:hover {
+	display: block;
+	list-style-type:none;
+	color:#1D708C;
+	height: 24px;
+	padding: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	line-height: 24px;
+	text-decoration:none;
+	text-indent: 4px;
+	background-color: #e4e4e5;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 1px;
+	margin-left: 0px;
+}
+
+#navigation ul li ul li a{
+	display: block;
+	list-style-type:none;
+	color:#333333;
+	height: 24px;
+	padding: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 24px;
+	text-decoration:none;
+	text-indent: 4px;
+	background-color: #e4e4e5;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 1px;
+	margin-left: 0px;
+	text-indent: 10px;
+}
+
+#navigation ul li ul li a:hover {
+	display: block;
+	list-style-type:none;
+	color:#1D708C;
+	height: 24px;
+	padding: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	line-height: 24px;
+	text-decoration:none;
+	text-indent: 4px;
+	background-color: #e4e4e5;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 1px;
+	margin-left: 0px;
+	text-indent: 10px;
+}
+
+/* footer */
+
+#footer {
+	text-align: left;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 8px;
+	padding-left: 8px;
+	color: #18575D;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	width: 900px;
+	background-color: #FFFFFF;
+}
+
+
+/* posts */
+.post h1 a {
+	color: #3A90FD;
+	text-decoration: none;
+}
+.post h1 a:hover {
+	border-color: #CCC;
+	color: #3A90FD;
+}
+
+.descr {
+	color: #1D1D1D;
+	font-size: 11px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	padding: 0px;
+	margin: 0px;
+}
+
+.post {
+	margin: 0px;
+	padding: 0px;
+}
+.entry {
+	margin: 0px;
+	padding: 0px;
+}
+.post .info{
+	color: #222;
+	margin-top: 2px;
+	margin-right: 18px;
+	margin-bottom: 4px;
+	margin-left: 21px;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+}
+/*.post img {
+	margin: 0px;
+	padding: 0px;
+}*/
+
+.info a {text-decoration: none;}
+.info a:hover {text-decoration: underline;}
+
+/* comments */
+.content ol li {
+	background: none;
+}
+
+.commentlist {margin: 0; padding: 0;}
+.commentlist li {
+	margin-bottom: 1.2em;
+	list-style: decimal;
+}
+#commentform {
+	width: 360px;
+	padding: 6px;
+	margin-top: 1em;
+	margin-right: 0;
+	margin-bottom: 1em;
+	margin-left: 0;
+}
+.commentmetadata {padding: 2px 0 4px;}
+.commentmetadata a {
+	color: #7AD2D7;
+	text-decoration: none;
+}
+.commentmetadata a:hover {text-decoration: underline;}
+
+textarea.styled {width: 280px;}
+
+.styled {
+	font-size: 1.1em;
+	background: #F8F7F6;
+	border: 1px solid #D6D3D3;
+}
+.styled:hover {
+	background: #FFF;
+	border: 1px solid #D6D3D3;
+}
+.styled:focus {
+	background: #FFF;
+	border: 1px solid #939793;
+}
+#commentform input {margin-bottom: 3px;}
+
+/* calendar */
+#wp-calendar {color:#A0A0A0;}
+
+.navigation table caption {border-bottom-color:#000;}
+
+.navigation table thead tr {
+  border-bottom-color:#000;
+  color:#A53512;
+}
+
+.navigation table th {border-bottom-color:#000;}
+
+.navigation table td#today {
+  border-color:#000;
+  color:#A53512;
+}
+
+.navigation table td a {
+  border-bottom-color:#000;
+  background-color:#EDF3DE;
+}
+
+.navigation table tfoot {border-top-color:#000;}
+
+.navigation table tfoot a {background:none;}
+
+/* calendar
+--------------------------------------------------*/
+#wp-calendar {
+  display:inline-table;
+  border-collapse:collapse;
+  width:185px;
+  margin:0px 10px 0 10px;
+  text-align:center;
+}
+
+.navigation table caption {
+  margin: -5px 10px 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid;
+  letter-spacing: 0.1em;
+}
+
+.navigation table thead tr {border-bottom:1px solid;}
+
+.navigation table th {border-bottom:1px solid;}
+
+.navigation table td {
+  width: 225px; 
+  padding: 1px;
+  font-size: 0.9em;
+}
+
+.navigation table td#today {
+  padding: 0;
+  border: 1px solid;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.navigation table td a {
+  display: block;
+  border-bottom: 1px solid;
+  font-weight: bold;
+  font-size: 1.15em;
+}
+
+.navigation table tfoot {border-top:1px solid;}
+.navigation table tfoot a {
+  border: none;
+  font-weight: bold;
+}
+.navigation table tfoot #prev a {text-align:left;}
+.navigation table tfoot #next a {text-align:center;}
+
+#searchform {padding: 0px;}
