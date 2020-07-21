@@ -100,7 +100,7 @@ def localserver(xprocess):
 
 @pytest.mark.parametrize("path", paths)
 @pytest.mark.parametrize("scheme, netloc, status", url_conf)
-def test_url_get(scheme, netloc, path, status, localserver):
+def test_url_get(scheme, netloc, path, status): #, localserver):
     """Check URLs respond to HTTP requests."""
     params = query = fragment = ""
     components = scheme, netloc, path, params, query, fragment
