@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "01113f702b1ee031e70ea03bbb63960b47c4ab2ede3db3af6711dc21af82213b"
+            "sha256": "c8d9d4fb822dc60498ddcc1ea583873a3cdfd5094418db000376ddd01c15b487"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -65,22 +65,6 @@
             ],
             "version": "==0.13.1"
         },
-        "psutil": {
-            "hashes": [
-                "sha256:0ee3c36428f160d2d8fce3c583a0353e848abb7de9732c50cf3356dd49ad63f8",
-                "sha256:10512b46c95b02842c225f58fa00385c08fa00c68bac7da2d9a58ebe2c517498",
-                "sha256:4080869ed93cce662905b029a1770fe89c98787e543fa7347f075ade761b19d6",
-                "sha256:5e9d0f26d4194479a13d5f4b3798260c20cecf9ac9a461e718eb59ea520a360c",
-                "sha256:66c18ca7680a31bf16ee22b1d21b6397869dda8059dbdb57d9f27efa6615f195",
-                "sha256:68d36986ded5dac7c2dcd42f2682af1db80d4bce3faa126a6145c1637e1b559f",
-                "sha256:90990af1c3c67195c44c9a889184f84f5b2320dce3ee3acbd054e3ba0b4a7beb",
-                "sha256:a5b120bb3c0c71dfe27551f9da2f3209a8257a178ed6c628a819037a8df487f1",
-                "sha256:d8a82162f23c53b8525cf5f14a355f5d1eea86fa8edde27287dd3a98399e4fdf",
-                "sha256:f2018461733b23f308c298653c8903d32aaad7873d25e1d228765e91ae42c3f2",
-                "sha256:ff1977ba1a5f71f89166d5145c3da1cea89a0fdb044075a12c720ee9123ec818"
-            ],
-            "version": "==5.7.2"
-        },
         "py": {
             "hashes": [
                 "sha256:366389d1db726cd2fcfc79732e75410e5fe4d31db13692115529d34069a043c2",
@@ -102,14 +86,6 @@
             ],
             "index": "pypi",
             "version": "==5.4.3"
-        },
-        "pytest-xprocess": {
-            "hashes": [
-                "sha256:779aeca517cd9c996d1544bdc510cb3cff40c48136d94bbce6148e27f30a93ff",
-                "sha256:7ef3d6123fa2c83761528d4ac94330bf0b9ab807472f5181547ffe813d12e8de"
-            ],
-            "index": "pypi",
-            "version": "==0.13.1"
         },
         "requests": {
             "hashes": [

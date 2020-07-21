@@ -8,7 +8,6 @@ verify_ssl = true
 [packages]
 pytest = "*"
 requests = "*"
-pytest-xprocess = "*"
 
 [requires]
 python_version = "3.8"

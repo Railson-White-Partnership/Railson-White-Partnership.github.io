@@ -4,7 +4,6 @@ Functional tests for railsonwhite.com
 """
 from http import HTTPStatus
 from urllib.parse import urlunparse, urlparse
-from xprocess import ProcessStarter
 import requests
 import pytest
 
@@ -88,19 +87,9 @@ paths = [
 ]
 """
 
-@pytest.fixture
-def localserver(xprocess):
-    class Starter(ProcessStarter):
-        pattern = "Server running... press ctrl-c to stop."
-        args = ["bundle", "exec", "jekyll", "serve"]
-    logfile = xprocess.ensure("localserver", Starter)
-    yield
-    xprocess.getinfo("localserver").terminate()
-
-
 @pytest.mark.parametrize("path", paths)
 @pytest.mark.parametrize("scheme, netloc, status", url_conf)
-def test_url_get(scheme, netloc, path, status, localserver):
+def test_url_get(scheme, netloc, path, status):
     """Check URLs respond to HTTP requests."""
     params = query = fragment = ""
     components = scheme, netloc, path, params, query, fragment
