@@ -12,6 +12,7 @@ jobs:
       with:
         ruby-version: 2.5
     - run: make
+    - run: make localserver
     - run: make test
     - uses: AutoModality/action-xunit-viewer@v1  
       id: xunit-viewer
