@@ -19,8 +19,6 @@ url_conf = [
 
 paths = [
     "/",
-    ]
-"""
     "/approach/",
     "/client-list/",
     "/contact-us/",
@@ -85,7 +83,6 @@ paths = [
     "/xmlrpc.php?rsd",
     "/xmlrpc.php",
 ]
-"""
 
 @pytest.mark.parametrize("path", paths)
 @pytest.mark.parametrize("scheme, netloc, status", url_conf)
