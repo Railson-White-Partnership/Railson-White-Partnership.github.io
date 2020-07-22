@@ -45,16 +45,13 @@ paths = [
     "/wp-content/themes/default/assets/right_panel_bg.gif",
     "/wp-content/themes/default/style.css",
     "/wp-content/uploads/2009/02/anglian-logo.png",
-    "/wp-content/uploads/2009/02/care-agenda.jpg",
     "/wp-content/uploads/2009/02/ecca_casehistory.pdf",
     "/wp-content/uploads/2009/02/ecca-logo.jpg",
-    "/wp-content/uploads/2009/02/ecca-web.jpg",
     "/wp-content/uploads/2009/02/filmbank-logo.jpg",
     "/wp-content/uploads/2009/02/hill-house.jpg",
     "/wp-content/uploads/2009/02/ken-and-chels-logo.png",
     "/wp-content/uploads/2009/02/radcliffes.png",
     "/wp-content/uploads/2009/02/st-nicks.jpg",
-    "/wp-content/uploads/2009/02/whitehouse-web2.jpg",
     "/wp-content/uploads/2009/03/adr_casehistory.pdf",
     "/wp-content/uploads/2009/03/adr-st-nicholas-lets-talk2.jpg",
     "/wp-content/uploads/2009/03/adrcarelogo.jpg",
@@ -80,8 +77,6 @@ paths = [
     "/wp-content/uploads/2011/01/up-close-small-rgb.jpg",
     "/wp-content/uploads/2011/01/white-house_casehistory.pdf",
     "/wp-includes/wlwmanifest.xml",
-    "/xmlrpc.php?rsd",
-    "/xmlrpc.php",
 ]
 
 @pytest.mark.parametrize("path", paths)
