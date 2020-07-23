@@ -7,14 +7,13 @@ from urllib.parse import urlunparse, urlparse
 import requests
 import pytest
 
-schemes = [
-    "https",
-]
-
-netlocs = [
-    "www.railsonwhite.com",
-    "railson-white-partnership.github.io/website/"
-
+url_conf = [
+    ("http", "localhost:4000", HTTPStatus.OK),
+#    ("http", "www.railsonwhite.com", HTTPStatus.OK),
+#    ("http", "www.railsonwhite.com", HTTPStatus.FOUND),
+#    ("https", "www.railsonwhite.com", HTTPStatus.OK),
+#    ("http", "railson-white-partnership.github.io/website/", HTTPStatus.FOUND)
+#    ("https", "railson-white-partnership.github.io/website/", HTTPStatus.OK)
 ]
 
 
@@ -46,16 +45,13 @@ paths = [
     "/wp-content/themes/default/assets/right_panel_bg.gif",
     "/wp-content/themes/default/style.css",
     "/wp-content/uploads/2009/02/anglian-logo.png",
-    "/wp-content/uploads/2009/02/care-agenda.jpg",
     "/wp-content/uploads/2009/02/ecca_casehistory.pdf",
     "/wp-content/uploads/2009/02/ecca-logo.jpg",
-    "/wp-content/uploads/2009/02/ecca-web.jpg",
     "/wp-content/uploads/2009/02/filmbank-logo.jpg",
     "/wp-content/uploads/2009/02/hill-house.jpg",
     "/wp-content/uploads/2009/02/ken-and-chels-logo.png",
     "/wp-content/uploads/2009/02/radcliffes.png",
     "/wp-content/uploads/2009/02/st-nicks.jpg",
-    "/wp-content/uploads/2009/02/whitehouse-web2.jpg",
     "/wp-content/uploads/2009/03/adr_casehistory.pdf",
     "/wp-content/uploads/2009/03/adr-st-nicholas-lets-talk2.jpg",
     "/wp-content/uploads/2009/03/adrcarelogo.jpg",
@@ -81,21 +77,17 @@ paths = [
     "/wp-content/uploads/2011/01/up-close-small-rgb.jpg",
     "/wp-content/uploads/2011/01/white-house_casehistory.pdf",
     "/wp-includes/wlwmanifest.xml",
-    "/xmlrpc.php?rsd",
-    "/xmlrpc.php",
 ]
 
 @pytest.mark.parametrize("path", paths)
-@pytest.mark.parametrize("netloc", netlocs)
-@pytest.mark.parametrize("scheme", schemes)
-def test_url_get_ok(scheme, netloc, path):
+@pytest.mark.parametrize("scheme, netloc, status", url_conf)
+def test_url_get(scheme, netloc, path, status):
     """Check URLs respond to HTTP requests."""
     params = query = fragment = ""
     components = scheme, netloc, path, params, query, fragment
     url = urlunparse(components)
     response = requests.get(url, allow_redirects=False)
-    assert response.status_code == HTTPStatus.OK
-    assert response.url == url
+    assert response.status_code == status
 
 redirects = [
     ("railsonwhite.com", "www.railsonwhite.com"),
