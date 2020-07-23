@@ -2,7 +2,7 @@
 install:
 	pip install pipenv
 	pipenv install
-	gem install jekyll bundler
+	gem install bundler
 .PHONY: localserver
 localserver:
 	bundle exec jekyll serve &
