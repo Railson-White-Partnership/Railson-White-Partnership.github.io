@@ -56,15 +56,22 @@
 	    <div id="left">
         <div id="navigation">
 <ol>
-<li class="page_item current_page_item"><a href="/" title="About us">About us</a>
-</li>
-<li class="page_item"><a href="/approach/" title="Approach">Approach</a>
-</li>
-<li class="page_item"><a href="/experience/" title="Experience">Experience</a>
-</li>
-<li class="page_item"><a href="/team/" title="Team">Team</a>
-</li>
-<li class="page_item page_folder"><a href="/our-work/" title="Case Studies">Case Studies</a>
+    {% assign items = site.data.toc %}
+    {% for item in items %}
+    <li class="page_item {% if item.url == page.url %}current_page_item{% endif %}">
+        <a href="{{ item.url }}">{{ item.title }}</a>
+        {% if item.collection == page.collection %}
+        <ul>
+        {% for entry in item.subnavigation %}
+        <li class="page_item {% if entry.url == page.url %}current_page_item{% endif %}">
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+        </li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+    </li>
+    {% endfor %}
+<!--
 </li>
 <li class="page_item"><a href="/market-research/" title="Market Research">Market Research</a>
 </li>
@@ -72,14 +79,21 @@
 </li>
 <li class="page_item"><a href="/contact-us/" title="Contact us">Contact us</a>
 </li>
+-->
 </ol>
         </div>
         </div>
-        <div id="content">
+
+<div id="content">
+<div id="alpha">
+    <div class="post" id="post-{{ page.post_id }}">
+        <div class="entry">
             {{ content }}
-        </div>
-        <br clear="all" />
     </div>
+</div>
+<br clear="all" />
+
+</div>
 </div>
 
 <div id="footer">&copy; <script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script> Railson White Partnership
