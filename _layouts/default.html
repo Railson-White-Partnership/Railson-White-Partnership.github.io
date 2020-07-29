@@ -49,56 +49,26 @@
 </head>
 
 <body>
-
 <div id="container">
     <div id="banner"></div>
     <div id="greenband">
 	    <div id="left">
-        <div id="navigation">
-<ol>
-    {% assign items = site.data.toc %}
-    {% for item in items %}
-    <li class="page_item {% if item.url == page.url %}current_page_item{% endif %}">
-        <a href="{{ item.url }}">{{ item.title }}</a>
-        {% if item.collection == page.collection %}
-        <ul>
-        {% for entry in item.subnavigation %}
-        <li class="page_item {% if entry.url == page.url %}current_page_item{% endif %}">
-            <a href="{{ entry.url }}">{{ entry.title }}</a>
-        </li>
-        {% endfor %}
-        </ul>
-        {% endif %}
-    </li>
-    {% endfor %}
-<!--
-</li>
-<li class="page_item"><a href="/market-research/" title="Market Research">Market Research</a>
-</li>
-<li class="page_item"><a href="/client-list/" title="Client List">Client List</a>
-</li>
-<li class="page_item"><a href="/contact-us/" title="Contact us">Contact us</a>
-</li>
--->
-</ol>
+        {% include navigation.html %}
         </div>
+        <div id="content">
+            <div id="alpha">
+                <div class="post" id="post-{{ page.post_id }}">
+                    <div class="entry">
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+            {% include sidepane.html content=page.sidepane %}
         </div>
-
-<div id="content">
-<div id="alpha">
-    <div class="post" id="post-{{ page.post_id }}">
-        <div class="entry">
-            {{ content }}
-    </div>
+        <br clear="all" />
+   </div>
 </div>
-<br clear="all" />
-
-</div>
-</div>
-
 <div id="footer">&copy; <script type="text/javascript">var d = new Date();document.write(d.getFullYear());</script> Railson White Partnership
 </div>
-
 </body>
-
 </html>

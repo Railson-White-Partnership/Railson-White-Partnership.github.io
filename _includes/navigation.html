@@ -1,0 +1,19 @@
+<div id="navigation">
+<ol>
+{% assign items = site.data.toc %}
+{% for item in items %}
+<li class="page_item {% if item.url == page.url %}current_page_item{% endif %}">
+<a href="{{ item.url }}">{{ item.title }}</a>
+{% if item.collection == page.collection %}
+<ul>
+{% for entry in item.subnavigation %}
+<li class="page_item {% if entry.url == page.url %}current_page_item{% endif %}">
+<a href="{{ entry.url }}">{{ entry.title }}</a>
+</li>
+{% endfor %}
+</ul>
+{% endif %}
+</li>
+{% endfor %}
+</ol>
+</div>
