@@ -9,23 +9,27 @@ import pytest
 
 url_conf = [
     ("http", "localhost:4000", HTTPStatus.OK),
-#    ("http", "www.railsonwhite.com", HTTPStatus.OK),
+    ("http", "www.railsonwhite.com", HTTPStatus.OK),
 #    ("http", "www.railsonwhite.com", HTTPStatus.FOUND),
 #    ("https", "www.railsonwhite.com", HTTPStatus.OK),
-#    ("http", "railson-white-partnership.github.io/website/", HTTPStatus.FOUND)
-#    ("https", "railson-white-partnership.github.io/website/", HTTPStatus.OK)
+    ("http", "railson-white-partnership.github.io", HTTPStatus.MOVED_PERMANENTLY),
+    ("https", "railson-white-partnership.github.io", HTTPStatus.OK),
 ]
 
 
 paths = [
     "/",
+    "/old/",
+    "/old/who.html",
+    "/old/what.html",
+    "/old/approach.html",
+    "/old/team.html",
+    "/old/experien.html",
+    "/old/contact.html",
     "/approach/",
     "/client-list/",
     "/contact-us/",
     "/experience/",
-    "/feed/",
-    "/feed/atom/",
-    "/feed/rss/",
     "/market-research/",
     "/our-work/",
     "/our-work/white-house-care/",
