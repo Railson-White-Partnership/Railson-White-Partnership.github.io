@@ -1,0 +1,242 @@
+/*
+modified:   2007-01-22"
+*/
+
+body
+{
+    font-family: Arial, Helvetica, Verdana, "Bitstream Vera Sans", Geneva,
+    sans-serif;
+}
+
+div#container, div#intro-container
+{
+    height: 490px;
+    width: 770px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -245px;
+    margin-left: -385px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+}
+
+div#header
+{
+    position: absolute;
+    width: 770px;
+    height: 125px;
+}
+
+div#intro-container[id]
+{
+    display: table;
+}
+
+div#intro
+{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+}
+
+div#intro[id]
+{
+    position: static;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+div#logo
+{
+    height: 100px;
+}
+
+div#intro div#logo
+{
+    position: relative;
+    top: -50%;
+    height: auto;
+}
+
+div#intro div#logo[id]
+{
+    position: static;
+}
+
+div#logo h1, div#logo h2
+{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+div#logo h1
+{
+    font-size: 36pt;
+}
+
+div#logo h2
+{
+    font-size: 18pt;
+}
+
+div#logo h1 a
+{
+    text-decoration: none;
+}
+
+div#logo h1 span#a, div#logo h1 a span#a
+{
+    color: #333333;
+}
+
+div#logo h1 span#b, div#logo h1 a span#b, div#logo h1 a:hover span#a
+{
+    color: #666666;
+}
+
+div#logo h1 span#c, div#logo h1 a span#c, div#logo h1 a:hover span#b
+{
+    color: #999999;
+}
+
+div#logo h1 a:hover span#c
+{
+    color: #cccccc;
+}
+
+div#logo h2
+{
+    color: #999999;
+}
+
+div#navigation
+{
+    height: 28px;
+    text-align: center;
+    font-size: 13pt;
+    background-color: #cccccc; 
+}
+
+ul#nav-list, ul#nav-list li
+{
+    list-style: none;
+    padding-top: 5px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+ul#nav-list li
+{
+    display: inline;
+}
+
+ul#nav-list li.current a:link, ul#nav-list li.current a:visited
+{
+    font-weight: bold;
+    color: #333333;
+}
+
+
+ul#nav-list li a:link, ul#nav-list li a:visited
+{
+    color: #666666;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 24px;
+}
+
+div#content
+{
+    position: absolute;
+    top: 128px;
+    width: 690px;
+    height: 332px; 
+    background-color: #3366ff;
+    color: #ffffff;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    text-align: left;
+    font-size: 11pt;
+}
+
+div#content h3
+{
+    display: none;
+}
+
+div#content h4
+{
+    margin-left: 40px;
+}
+
+div#content p
+{
+    margin-top: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 0;
+}
+
+div#content p.sparse
+{
+    margin-top: 80px;
+}
+
+div#content p.indent
+{
+    margin-left: 60px;
+}
+
+div#content ul
+{
+    padding-left: 40px;
+    margin-left: 40px;
+}
+
+div#content table
+{
+    width: 650px;
+    margin-left: 40px;
+    border-collapse: collapse;
+    font-size: 11pt;
+}
+
+div#content caption
+{
+    text-align: left;
+    line-height: 2;
+    font-size: 12pt;
+}
+
+div#content address
+{
+    margin-top: 40px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+div#content a:link, div#content a:visited
+{
+    color: #ffffff;
+}
+
+div#footer
+{
+    position: absolute;
+    top: 500px;
+    width: 770px;
+    text-align: center;
+    font-size: 8pt;
+    color: #666666; 
+    background-color: transparent;
+}
